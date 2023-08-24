@@ -66,3 +66,6 @@ jobs:
         with:
           name: ${{ matrix.name }}
           path: deploy/
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
+      
