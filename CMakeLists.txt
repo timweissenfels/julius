@@ -1,5 +1,6 @@
 cmake_minimum_required(VERSION 3.1)
 include(CMakeDependentOption)
+include(CMakePrintHelpers)
 
 set(TARGET_PLATFORM "default" CACHE STRING "Platform to cross-compile for. Options: vita switch android emscripten. Leave blank for no cross compilation")
 set_property(CACHE TARGET_PLATFORM PROPERTY STRINGS default vita switch android emscripten)
@@ -749,6 +750,7 @@ else()
     endif()
 
     include_directories(SYSTEM "ext/png")
+    cmake_print_variables(PNG_VERSION_STRING)
     target_sources(${SHORT_NAME} PRIVATE "${PNG_FILES}" "${ZLIB_FILES}")
 endif()
 
