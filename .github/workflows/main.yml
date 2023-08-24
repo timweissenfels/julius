@@ -53,9 +53,9 @@ jobs:
         run: |
           ./.ci_scripts/run_cmake.sh
           ./.ci_scripts/run_build.sh
-      - name: ldd output
+      - name: all files
         run: |
-          ldd julius
+          find .
       - name: Upload development artifacts
         env:
           UPLOAD_TOKEN: ${{ secrets.UPLOAD_TOKEN }}
