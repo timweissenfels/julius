@@ -737,7 +737,7 @@ if(SDL2_MIXER_INCLUDE_DIR)
 endif()
 
 if(SYSTEM_LIBS)
-    find_package(PNG 1.6.31)
+    find_package(PNG 1.6.31 EXACT)
 endif()
 if(PNG_FOUND)
     include_directories(SYSTEM ${PNG_INCLUDE_DIRS})
