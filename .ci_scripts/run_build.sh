@@ -28,7 +28,7 @@ case "$BUILD_TARGET" in
 	;;
 "linux")
 	cd build && make -j4 && make test
-	zip julius.zip julius
+	ldd julius
 	;;
 "android")
 	cd android
